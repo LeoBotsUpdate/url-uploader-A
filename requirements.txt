@@ -2,8 +2,6 @@ Flask==2.2.2
 gunicorn==20.1.0
 aiohttp==3.8.2
 
-https://github.com/10Jib/Docker-YTDLP/archive/3ad95f9ee2cd4e2335b92b49486f32651c29a2e2.zip
-
 beautifulsoup4
 hachoir
 numpy
