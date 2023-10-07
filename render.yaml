@@ -4,7 +4,7 @@ services:
   - type: web
     name: ben-url-filter-bot
     env: python
-    startCommand: python3 bot.py
+    startCommand: python bot.py
     buildCommand: pip3 install -U -r requirements.txt
     repo: https://github.com/LISA-KOREA/UPLOADER-BOT-V3.git # optional
     region: oregon # optional (defaults to oregon)
