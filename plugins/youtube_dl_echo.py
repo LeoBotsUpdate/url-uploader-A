@@ -12,11 +12,6 @@ from PIL import Image
 from plugins.config import Config
 import time
 
-if bool(os.environ.get("WEBHOOK", False)):
-    from sample_config import Config
-else:
-    from config import Config
-
 from plugins.translation import Translation
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram import filters
