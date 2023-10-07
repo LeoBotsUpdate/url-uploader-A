@@ -195,7 +195,7 @@ async def echo(bot, update):
                         )
                     ]
                     """if duration is not None:
-                        cb_string_video_message = "{}|{}|{}|{}|{}".format(
+                        cb_string_video_message = "{}|{}|{}|{}".format(
                             "vm", format_id, format_ext, ran, randem)
                         ikeyboard.append(
                             InlineKeyboardButton(
