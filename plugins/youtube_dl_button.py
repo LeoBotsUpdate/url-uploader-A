@@ -176,9 +176,9 @@ async def youtube_dl_call_back(bot, update):
             file_size = os.stat(download_directory).st_size
         except FileNotFoundError as exc:
             download_directory = os.path.splitext(download_directory)[0] + "." + "mkv"
-          # https://stackoverflow.com/a/678242/472394
-             file_size = os.stat(download_directory).st_size
-          if file_size > Config.TG_MAX_FILE_SIZE:
+            # https://stackoverflow.com/a/678242/4723940
+            file_size = os.stat(download_directory).st_size
+        if file_size > Config.TG_MAX_FILE_SIZE:
             await bot.edit_message_text(
                 chat_id=update.message.chat.id,
                 text=Translation.RCHD_TG_API_LIMIT.format(time_taken_for_download, humanbytes(file_size)),
