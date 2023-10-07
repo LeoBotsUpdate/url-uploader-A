@@ -111,8 +111,7 @@ async def echo(bot, update):
                 "--youtube-skip-dash-manifest",
                 "-j",
                 url,
-                "--proxy", Config.HTTP_PROXY
-            ]
+                "--proxy", Config.HTTP_PROXY]
     else:
         command_to_exec = [
             "yt-dlp",
