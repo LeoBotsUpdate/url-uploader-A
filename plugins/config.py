@@ -37,13 +37,13 @@ class Config(object):
 
     HTTP_PROXY = os.environ.get("HTTP_PROXY", "")
 
-    OUO_IO_API_KEY = ""
+    OUO_IO_API_KEY = os.environ.get("OUO_IO_API_KEY", "")
 
-    MAX_MESSAGE_LENGTH = 4096
+    MAX_MESSAGE_LENGTH = 2048
 
     PROCESS_MAX_TIMEOUT = 0
 
-    DEF_WATER_MARK_FILE = "Use this bot @UploadLinkToFileBot"
+    DEF_WATER_MARK_FILE = "Use this bot @Url_Uploader_A_bot"
 
     DATABASE_URL = os.environ.get("DATABASE_URL", "")
 
