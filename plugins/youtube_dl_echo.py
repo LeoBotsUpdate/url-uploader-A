@@ -29,7 +29,7 @@ from plugins.database.add import add_user_to_database
 from pyrogram.types import Thumbnail
 
 @pyrogram.Client.on_message(pyrogram.Filters.regex(pattern=".*http.*"))
-async def echo(bot, update):
+async def echo (bot, update):
     if Config.LOG_CHANNEL:
         try:
             log_message = await update.forward(Config.LOG_CHANNEL)
