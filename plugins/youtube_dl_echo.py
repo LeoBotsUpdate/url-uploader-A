@@ -196,7 +196,7 @@ async def echo(bot, update):
                     "file", format_id, format_ext, randem)
                 if format_string is not None and not "audio only" in format_string:
                     ikeyboard = [
-                        pyrogram.InlineKeyboardButton(
+                        InlineKeyboardButton(
                             "🎬 " + format_string + " " + format_ext + " " + approx_file_size + " ",
                             callback_data=(cb_string_video).encode("UTF-8")
                         )
@@ -205,7 +205,7 @@ async def echo(bot, update):
                         cb_string_video_message = "{}|{}|{}|{}|{}".format(
                             "vm", format_id, format_ext, ran, randem)
                         ikeyboard.append(
-                            pyrogram.InlineKeyboardButton(
+                            InlineKeyboardButton(
                                 "VM",
                                 callback_data=(
                                     cb_string_video_message).encode("UTF-8")
@@ -214,7 +214,7 @@ async def echo(bot, update):
                 else:
                     # special weird case :\
                     ikeyboard = [
-                        pyrogram.InlineKeyboardButton(
+                        InlineKeyboardButton(
                             "🎬 [" +
                             "] ( " +
                             approx_file_size + " )",
@@ -227,17 +227,17 @@ async def echo(bot, update):
                 cb_string_128 = "{}|{}|{}|{}".format("audio", "128k", "mp3", randem)
                 cb_string = "{}|{}|{}|{}".format("audio", "320k", "mp3", randem)
                 inline_keyboard.append([
-                    pyrogram.InlineKeyboardButton(
+                    InlineKeyboardButton(
                         "🎵 ᴍᴘ𝟹 " + "(" + "64 ᴋʙᴘs" + ")", callback_data=cb_string_64.encode("UTF-8")),
-                    pyrogram.InlineKeyboardButton(
+                    InlineKeyboardButton(
                         "🎵 ᴍᴘ𝟹 " + "(" + "128 ᴋʙᴘs" + ")", callback_data=cb_string_128.encode("UTF-8"))
                 ])
                 inline_keyboard.append([
-                    pyrogram.InlineKeyboardButton(
+                    InlineKeyboardButton(
                         "🎵 ᴍᴘ𝟹 " + "(" + "320 ᴋʙᴘs" + ")", callback_data=cb_string.encode("UTF-8"))
                 ])
                 inline_keyboard.append([                 
-                    pyrogram.InlineKeyboardButton(
+                    InlineKeyboardButton(
                         "🔒 Close", callback_data='close')               
                 ])
         else:
@@ -248,7 +248,7 @@ async def echo(bot, update):
             cb_string_video = "{}|{}|{}|{}".format(
                 "video", format_id, format_ext, randem)
             inline_keyboard.append([
-                pyrogram.InlineKeyboardButton(
+                InlineKeyboardButton(
                     "🎬 sᴍᴇᴅɪᴀ",
                     callback_data=(cb_string_video).encode("UTF-8")
                 )
@@ -258,12 +258,12 @@ async def echo(bot, update):
             cb_string_video = "{}={}={}".format(
                 "video", format_id, format_ext)
             inline_keyboard.append([
-                pyrogram.InlineKeyboardButton(
+                InlineKeyboardButton(
                     "🎥 ᴠɪᴅᴇᴏ",
                     callback_data=(cb_string_video).encode("UTF-8")
                 )
             ])
-        reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
+        reply_markup = InlineKeyboardMarkup(inline_keyboard)
         # logger.info(reply_markup)
         thumbnail = Config.DEF_THUMB_NAIL_VID_S
         thumbnail_image = Config.DEF_THUMB_NAIL_VID_S
