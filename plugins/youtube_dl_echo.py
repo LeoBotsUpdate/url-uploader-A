@@ -118,8 +118,7 @@ async def echo(bot, update):
               "--no-warnings",
               "--youtube-skip-dash-manifest",
               "-j",
-              url
-          ]
+              url]
     if youtube_dl_username is not None:
         command_to_exec.append("--username")
         command_to_exec.append(youtube_dl_username)
