@@ -2,11 +2,11 @@
 services:
   # A Docker web service
   - type: web
-    name: ben-url-filter-bot
+    name: Url-Uploader-A
     env: python
     startCommand: python bot.py
     buildCommand: pip3 install -U -r requirements.txt
-    repo: https://github.com/LISA-KOREA/UPLOADER-BOT-V3.git # optional
+    repo: https://github.com/LeoBotsUpdate/url-uploader-A.git # optional
     region: oregon # optional (defaults to oregon)
     plan: free # optional (defaults to starter)
     branch: web # optional (defaults to master)
